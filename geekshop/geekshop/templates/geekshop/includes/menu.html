@@ -1,7 +1,12 @@
 <a href="{% url 'index' %}" class="logo"></a>{% now 'Сегодня: d M Y H:i' %}
 <ul class="menu">
     <li><a href="{% url 'index' %}" class="active">домой</a></li>
-    <li><a href="{% url 'products:index' %}">продукты</a></li>
+    <li>
+        <a href="{% url 'products:index' %}" class="{% if request.resolver_match.namespace == 'products' %}
+            active {% endif %}">
+            продукты
+        </a>
+    </li>
     <li><a href="{% url 'contacts' %}">контакты</a></li>
     {% if user.is_authenticated %}
     <li>
@@ -16,6 +21,13 @@
         {% else %}
             <a href="{% url 'auth:login' %}">войти</a>
         {% endif %}
+    </li>
+    <li>
+        <a href="{% url 'basket:view' %}" class="basket">
+            <span>
+                {% if basket %} {{ basket|length }} {% endif %}
+            </span>
+        </a>
     </li>
 </ul>
 <a href="#" class="search"></a>
