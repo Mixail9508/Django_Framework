@@ -46,9 +46,14 @@ def basket_remove(request, pk):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
+def is_ajax(request):
+    return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
+
+
 @login_required
 def basket_edit(request, pk, quantity):
-    if request.is_ajax():
+    edit_ajax = is_ajax(request)
+    if edit_ajax:
         quantity = int(quantity)
         new_basket_item = Basket.objects.get(pk=int(pk))
 

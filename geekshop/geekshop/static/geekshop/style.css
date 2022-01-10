@@ -82,7 +82,6 @@ html, body {
 }
 .basket {
 	display: block;
-	width: 23px;
 	height: 23px;	
 	background-image: url(img/basket.png);
 	position: absolute;
@@ -112,7 +111,7 @@ html, body {
 
 .button-order {
 	background-color:  #ffffff;
-	box-shadow: 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.35);
+	box-shadow: 0 2px 4.85px 0.15px rgba(33, 33, 33, 0.35);
 	width: 212px;
 	height: 45px;
 	display: block;
@@ -175,7 +174,7 @@ html, body {
 	border-radius: 50%;
 	background-color: rgba(33, 33, 33, 0.2);
 	float: left;
-	margin: 0px 5px;
+	margin: 0 5px;
 }
 .navi a:nth-child(2) {
 	display: block;
@@ -184,13 +183,13 @@ html, body {
 	border-radius: 50%;
 	background-color: #212121;
 	float: left;
-	margin: 0px;
+	margin: 0;
 }
 .navi a:hover {
 	width: 40px;
 	height: 40px;
 	background-color: #212121;
-	margin: 0px;
+	margin: 0;
 }
 
 .featured {
@@ -669,7 +668,7 @@ td:first-child {
 }
 .social2{
 	background: url(img/social-links.png);
-	background-position: -34px 0px;
+	background-position: -34px 0;
 	height: 28px;
 	width: 28px;
 	float: left;
@@ -677,7 +676,7 @@ td:first-child {
 }
 .social3{
 	background: url(img/social-links.png);
-	background-position: -67px 0px;
+	background-position: -67px 0;
 	height: 28px;
 	width: 28px;
 	float: left;
@@ -685,7 +684,7 @@ td:first-child {
 }
 .social4{
 	background: url(img/social-links.png);
-	background-position: -101px 0px;
+	background-position: -101px 0;
 	height: 28px;
 	width: 28px;
 	float: left;
@@ -714,21 +713,21 @@ td:first-child {
 }
 
 .location {
-	padding: 0px 97px;
+	padding: 0 97px;
 }
 .location-1 {
 	height: 368px;
 	width: 368px;
 	border: 1px solid #9c9c9c;
-	margin: 71px 28px 122px 0px;
+	margin: 71px 28px 122px 0;
 	float: left;
 }
 .location-1:last-child {
-	margin: 71px 0px 122px 0px;
+	margin: 71px 0 122px 0;
 }
 .location i {
 	display: block;
-	margin: 48px auto 0px;
+	margin: 48px auto 0;
 	width: 38px;
 }
 .location h4 {
@@ -771,7 +770,7 @@ td:first-child {
 	font-size: 18px;
 	font-weight: 700;
 	text-decoration: none;
-	padding: 0px 35px 16px 7px;
+	padding: 0 35px 16px 7px;
 	letter-spacing: 1px;
 }
 .tab-control .active {
@@ -790,7 +789,7 @@ td:first-child {
 }
 
 .products-box {
-	padding: 0px 83px;
+	padding: 0 83px;
 }
 .products {
 	margin-top: 50px;
@@ -860,7 +859,7 @@ td:first-child {
 	padding-left: 360px;
 }
 .links-menu {
-	margin:	27px auto 0px;	
+	margin:	27px auto 0;
 	position: absolute;
 }
 .links-menu li {
@@ -909,7 +908,7 @@ td:first-child {
 .slider-control {
 	width: 420px;
 	height: 70px;
-	margin: 11px auto 0px;
+	margin: 11px auto 0;
 	padding-left: 150px
 }
 .slider-control .block {
@@ -944,7 +943,7 @@ td:first-child {
 	font-weight: 700;
 	text-align: center;
 	margin-top: 47px;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 .description .red {
 	text-transform: uppercase;
@@ -984,8 +983,37 @@ td:first-child {
 	margin-bottom: 0.5em;
 }
 
+.red-button {
+	display: block;
+	height: 71px;
+	width: 510px;
+	border-radius: 35px;
+	background-color: #f44336;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color:  #ffffff;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 75px;
+	box-shadow: 0 2px 4.85px 0.15px rgba(33, 33, 33, 0.35);
+	letter-spacing: 6px;
+	margin-top: 31px;
+}
+.red-button:hover {
+	box-shadow: none;
+}
+.red-button:active {
+	box-shadow: none;
+	background-color: #d41306;
+}
+
+.category_record.not_active {
+	opacity: 0.5;
+}
+
 .related {
-	padding: 0px 98px;
+	padding: 0 98px;
 }
 .related .title {
 	height: 343px;
@@ -1012,7 +1040,7 @@ td:first-child {
 	position: relative;
 }
 .related-products .block:nth-child(3n) {
-	margin-right: 0px;
+	margin-right: 0;
 }
 .related-products a .text {
 	display: none;
