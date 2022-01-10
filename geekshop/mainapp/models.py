@@ -2,18 +2,18 @@ from django.db import models
 
 
 class ProductCategory(models.Model):
-    objects = None
     name = models.CharField(verbose_name='имя', max_length=64, unique=True)
     description = models.TextField(verbose_name='описание', blank=True)
-    create_date = models.DateField(auto_now_add=True)
-    update = models.DateField(auto_now=True)
+    is_active = models.BooleanField(verbose_name='активна', default=True)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
 
 
 class Product(models.Model):
-    objects = None
     category = models.ForeignKey(
         ProductCategory,
         on_delete=models.CASCADE,
@@ -27,16 +27,16 @@ class Product(models.Model):
         blank=True,
     )
     short_desc = models.CharField(
-        verbose_name='краткое описание',
+        verbose_name='короткое описание',
         max_length=60,
         blank=True,
     )
     description = models.TextField(
-        verbose_name='описание продуктов',
+        verbose_name='описание',
         blank=True,
     )
     price = models.DecimalField(
-        verbose_name='цена продуктов',
+        verbose_name='цена продукта',
         max_digits=8,
         decimal_places=2,
         default=0,
@@ -47,4 +47,4 @@ class Product(models.Model):
     )
 
     def __str__(self):
-        return f"{self.name} ({self.category.name})"
+        return f'{self.name} ({self.category.name})'
